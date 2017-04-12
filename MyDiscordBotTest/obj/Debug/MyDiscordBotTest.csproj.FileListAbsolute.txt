@@ -18,3 +18,6 @@ c:\users\pim\documents\visual studio 2017\Projects\MyDiscordBotTest\MyDiscordBot
 c:\users\pim\documents\visual studio 2017\Projects\MyDiscordBotTest\MyDiscordBotTest\obj\Debug\MyDiscordBotTest.exe
 c:\users\pim\documents\visual studio 2017\Projects\MyDiscordBotTest\MyDiscordBotTest\obj\Debug\MyDiscordBotTest.pdb
 c:\users\pim\documents\visual studio 2017\Projects\MyDiscordBotTest\MyDiscordBotTest\bin\Debug\SuperSocket.ClientEngine.dll
+C:\Users\pim\Documents\Visual Studio 2017\Projects\MyDiscordBotTest\MyDiscordBotTest\obj\Debug\MyDiscordBotTest.Properties.Resources.resources
+C:\Users\pim\Documents\Visual Studio 2017\Projects\MyDiscordBotTest\MyDiscordBotTest\obj\Debug\MyDiscordBotTest.csproj.GenerateResource.Cache
+C:\Users\pim\Documents\Visual Studio 2017\Projects\MyDiscordBotTest\MyDiscordBotTest\bin\Debug\Pictures\Zelda.jpg
