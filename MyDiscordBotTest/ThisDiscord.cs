@@ -3,18 +3,17 @@ using Discord.Commands;
 using Discord.Net;
 
 using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 /*  Discord Bot Command List:
- *  !Help -> Shows all the commands of the bot
- *  !Purge -> Cleans the chat for ... items
+ *  !Help -> Shows all the commands of the bot || Alias: info
+ *  !Purge -> Cleans the chat for ... items || Alias: Clean
  *  !Image -> shows image (not random yet)
  *  !Bye user.Name -> Says Bye to user
- *  !Hello user.Name -> Says Hello to user
+ *  !Hello user.Name -> Says Hello to user|| Alias: Hi, Hey
  *  
  *  Other Things:
  *  The Bot shows when someone is Banned/UnBanned or Joined/Left The Channel
@@ -59,15 +58,18 @@ namespace MyDiscordBotTest
         private void CommandLine()
         {
             commands.CreateCommand("hello")
-                .Description("The Hello Command")
+                .Description("Does The Hello Command")
+                .Alias(new string[] { "hi", "hey" })
                 .Parameter("GreetsUser", ParameterType.Required)
                 .Do(async (e) =>
                 {
-                    await e.Channel.SendMessage(e.User + " Says Hello to " + e.GetArg("GreetsUser"));
+                    await e.Channel.SendMessage(e.User + " Says hello to " + e.GetArg("GreetsUser"));    
                 });
+           
 
             commands.CreateCommand("bye")
-                .Description("GreetsUser")
+                .Alias(new string[] { "", "hey" })
+                .Description("Does The GoodBye Command")
                 .Parameter("ByeUser", ParameterType.Required)
                 .Do(async (e) =>
                 {
@@ -75,11 +77,11 @@ namespace MyDiscordBotTest
                 });
 
             commands.CreateCommand("help")
+                .Alias(new string[] { "info" })
                 .Do(async (e) =>
-            {
-                //await e.Command.Description
-                await e.Channel.SendMessage("We as a community will help you!! ... and the full command list will come shortly...");
-            });
+                {
+                    await e.Channel.SendMessage("We as a community will help you!! ... and the full command list will come shortly...");
+                });
 
         }
 
@@ -137,6 +139,7 @@ namespace MyDiscordBotTest
         private void TimeToPurge()
         {
             commands.CreateCommand("purge")
+                .Alias(new string[] { "clean" })
                 .Description("The Purge Command")
                 .Do(async (e) =>
                 {
